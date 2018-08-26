@@ -1,0 +1,467 @@
+<html>
+	<head>
+		<style>
+.button {
+    background-color: #317dca; /* Green */
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+   
+}
+
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 5px;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 12px;}
+.button5 {border-radius: 50%;}
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+.table1 {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #202020;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+body, ul, li {
+	font-size:14px; 
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:25px;
+	text-align:left;
+}
+
+#menu {
+	list-style:none;
+	width:99%;
+	margin:0px auto 0px auto;
+	height:53px;
+	padding:0px 20px 0px 20px;
+
+	/* Rounded Corners */
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+
+	/* Background color and gradients */
+	
+	background: #014464;
+	background: -moz-linear-gradient(top, #0272a7, #013953);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0272a7), to(#013953));
+	
+	/* Borders */
+	
+	border: 1px solid #002232;
+
+	-moz-box-shadow:inset 0px 0px 1px #edf9ff;
+	-webkit-box-shadow:inset 0px 0px 1px #edf9ff;
+	box-shadow:inset 0px 0px 1px #edf9ff;
+}
+
+#menu li {
+	float:left;
+	display:block;
+	text-align:center;
+	position:relative;
+	padding: 4px 10px 4px 10px;
+	margin-right:30px;
+	margin-top:7px;
+	border:none;
+}
+
+#menu li:hover {
+	border: 1px solid #777777;
+	padding: 4px 9px 4px 9px;
+	
+	/* Background color and gradients */
+	
+	background: #F4F4F4;
+	background: -moz-linear-gradient(top, #F4F4F4, #EEEEEE);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4), to(#EEEEEE));
+	
+	/* Rounded corners */
+	
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+}
+
+#menu li a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px; 
+	color: #EEEEEE;
+	display:block;
+	outline:0;
+	text-decoration:none;
+	text-shadow: 1px 1px 1px #000;
+}
+
+#menu li:hover a {
+	color:#161616;
+	text-shadow: 1px 1px 1px #ffffff;
+}
+#menu li .drop {
+	padding-right:21px;
+	background:url("img/drop.png") no-repeat right 8px;
+}
+#menu li:hover .drop {
+	background:url("img/drop.png") no-repeat right 7px;
+}
+
+.dropdown_1column, 
+.dropdown_2columns, 
+.dropdown_3columns, 
+.dropdown_4columns,
+.dropdown_5columns {
+	margin:4px auto;
+	float:left;
+	position:absolute;
+	left:-999em; /* Hides the drop down */
+	text-align:left;
+	padding:10px 5px 10px 5px;
+	border:1px solid #777777;
+	border-top:none;
+	
+	/* Gradient background */
+	background:#F4F4F4;
+	background: -moz-linear-gradient(top, #EEEEEE, #BBBBBB);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEEEEE), to(#BBBBBB));
+
+	/* Rounded Corners */
+	-moz-border-radius: 0px 5px 5px 5px;
+	-webkit-border-radius: 0px 5px 5px 5px;
+	border-radius: 0px 5px 5px 5px;
+}
+
+.dropdown_1column {width: 140px;}
+.dropdown_2columns {width: 280px;}
+.dropdown_3columns {width: 420px;}
+.dropdown_4columns {width: 560px;}
+.dropdown_5columns {width: 700px;}
+
+#menu li:hover .dropdown_1column, 
+#menu li:hover .dropdown_2columns, 
+#menu li:hover .dropdown_3columns,
+#menu li:hover .dropdown_4columns,
+#menu li:hover .dropdown_5columns {
+	left:-1px;
+	top:auto;
+}
+
+.col_1,
+.col_2,
+.col_3,
+.col_4,
+.col_5 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.col_1 {width:130px;}
+.col_2 {width:270px;}
+.col_3 {width:410px;}
+.col_4 {width:550px;}
+.col_5 {width:690px;}
+
+#menu .menu_right {
+	float:right;
+	margin-right:0px;
+}
+#menu li .align_right {
+	/* Rounded Corners */
+	-moz-border-radius: 5px 0px 5px 5px;
+    -webkit-border-radius: 5px 0px 5px 5px;
+    border-radius: 5px 0px 5px 5px;
+}
+
+#menu li:hover .align_right {
+	left:auto;
+	right:-1px;
+	top:auto;
+}
+
+#menu p, #menu h2, #menu h3, #menu ul li {
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:21px;
+	font-size:12px;
+	text-align:left;
+	text-shadow: 1px 1px 1px #FFFFFF;
+}
+#menu h2 {
+	font-size:21px;
+	font-weight:400;
+	letter-spacing:-1px;
+	margin:7px 0 14px 0;
+	padding-bottom:14px;
+	border-bottom:1px solid #666666;
+}
+#menu h3 {
+	font-size:14px;
+	margin:7px 0 14px 0;
+	padding-bottom:7px;
+	border-bottom:1px solid #888888;
+}
+#menu p {
+	line-height:18px;
+	margin:0 0 10px 0;
+}
+
+#menu li:hover div a {
+	font-size:12px;
+	color:#015b86;
+}
+#menu li:hover div a:hover {
+	color:#029feb;
+}
+
+
+.strong {
+	font-weight:bold;
+}
+.italic {
+	font-style:italic;
+}
+
+.imgshadow { /* Better style on light background */
+	background:#FFFFFF;
+	padding:4px;
+	border:1px solid #777777;
+	margin-top:5px;
+	-moz-box-shadow:0px 0px 5px #666666;
+	-webkit-box-shadow:0px 0px 5px #666666;
+	box-shadow:0px 0px 5px #666666;
+}
+.img_left { /* Image sticks to the left */
+	width:auto;
+	float:left;
+	margin:5px 15px 5px 5px;
+}
+
+#menu li .black_box {
+	background-color:#333333;
+	color: #eeeeee;
+	text-shadow: 1px 1px 1px #000;
+	padding:4px 6px 4px 6px;
+
+	/* Rounded Corners */
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+	/* Shadow */
+	-webkit-box-shadow:inset 0 0 3px #000000;
+	-moz-box-shadow:inset 0 0 3px #000000;
+	box-shadow:inset 0 0 3px #000000;
+}
+
+#menu li ul {
+	list-style:none;
+	padding:0;
+	margin:0 0 12px 0;
+}
+#menu li ul li {
+	font-size:12px;
+	line-height:24px;
+	position:relative;
+	text-shadow: 1px 1px 1px #ffffff;
+	padding:0;
+	margin:0;
+	float:none;
+	text-align:left;
+	width:130px;
+}
+#menu li ul li:hover {
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+#menu li .greybox li {
+	background:#F4F4F4;
+	border:1px solid #bbbbbb;
+	margin:0px 0px 4px 0px;
+	padding:4px 6px 4px 6px;
+	width:116px;
+
+	/* Rounded Corners */
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+#menu li .greybox li:hover {
+	background:#ffffff;
+	border:1px solid #aaaaaa;
+	padding:4px 6px 4px 6px;
+	margin:0px 0px 4px 0px;
+}
+
+</style>
+		
+	</head>
+	<body>
+		<div style="float: left;margin-left: 0px;border: 1px solid black;width: 100%;height: auto;padding: 3px;">
+		
+			<div style="float: left;margin-left: 1px;border: 0px solid green;width: 98%;height: auto;margin-top: 5px;">
+			
+			
+<ul id="menu">
+    
+    <li><a href="#" class="drop">Vllar/Invictus Case Manager(SCM) </a><!-- Begin Home Item --> </li><!-- End Home Item -->
+
+   
+	<li class="menu_right"><a href="#" class="drop">Logout</a></li>
+
+    
+
+
+</ul>
+			
+			
+			</div>
+		
+			<div style="float: left;margin-left: 1px;border: 0px solid green;width: 98%;height: auto;margin-top: 5px;">
+			<p style="width: 102%;height: 20px;background-color: #0a67e4;"></p>
+			
+			</div>
+			
+			
+			<div style="float: left;margin-left: 0px;border: 0px solid green;width: 40%;height: 50px;">
+            <input  type="button" value="Process1" class="button button2" style=" height: 30px; width: auto;"/>
+               <input  type="button" value="Process1" class="button button2" style=" height: 30px; width: auto;"/>
+           
+			</div>
+			<div style="float: left;margin-left: 0px;border: 0px solid green;width: 50%;height: 50px;">
+            <p style="float: left;margin-left: 500px;"><input  type="button" value="Process1" class="button button2" style=" height: 30px; width: auto;"/>
+               <input  type="button" value="Process1" class="button button2" style=" height: 30px; width: auto;"/>
+           </p>
+			</div>			
+			<div style="float: left;margin-left: 0px;border: 0px solid red;width: 100%;height: 600px;margin-top: 20px;">
+		
+			<div style="float: left;margin-left: 0px;border: 0px solid green;width: 20%;height: 600px;">
+                   <table border="1" class="table1">
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   	<tr><td>&nbsp;</td></tr>
+                   </table>
+			</div>
+			<div style="float: left;margin-left: 10px;border: 0px solid green;width: 78%;height: 500px;">
+             <div style="float: left;margin-left: 10px;border:0px solid green;width: 100%;height: 50px;">
+             search<input type="text" value=""/>&nbsp;search<input type="text" value=""/>&nbsp;search<input type="text" value=""/>
+             &nbsp;search<input type="text" value=""/> <input  type="button" value="Submit" class="button button2" style=" height: 30px; width: auto;"/>
+              <input  type="button" value="Submit" class="button button2" style=" height: 30px; width: auto;"/>
+           
+             </div>
+			<div style="float: left;margin-left: 10px;border: 0px solid green;width: 100%;height: 600px;">
+               
+               
+               <table class="table">
+  <tr>
+      <th><input type="checkbox" style="font-weight: bold;"/></th>
+
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+   <td><input type="checkbox" style="font-weight: bold;"/></td>
+
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+  <td><input type="checkbox" style="font-weight: bold;"/></td>
+
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+  <td><input type="checkbox" style="font-weight: bold;"/></td>
+
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+  <td><input type="checkbox" style="font-weight: bold;"/></td>
+
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+  <td><input type="checkbox" style="font-weight: bold;"/></td>
+
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+  <td><input type="checkbox" style="font-weight: bold;"/></td>
+
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+               
+			</div>
+			</div>
+			
+</div>
+<div style="float: left;margin-left: 0px;border: 1px solid #ccc;width: 100%;height: 50px;">footer area
+
+</div>
+		
+												
+		</div>
+	</body>
+	
+</html>
